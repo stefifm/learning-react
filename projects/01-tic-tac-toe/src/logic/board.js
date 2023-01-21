@@ -1,9 +1,9 @@
 import { WINNER_COMBOS } from '../constants'
 
-export const checkWinner = (boardToCheck) =>  {
+export const checkWinner = (boardToCheck) => {
   // Para ver si hay un ganador
   for (const combo of WINNER_COMBOS) {
-    const [a,b,c] = combo
+    const [a, b, c] = combo
     if (
       boardToCheck[a] && // Si es 0
       boardToCheck[a] === boardToCheck[b] &&
@@ -11,7 +11,6 @@ export const checkWinner = (boardToCheck) =>  {
     ) {
       return boardToCheck[a]
     }
-    
   }
 
   // si no hay ganador
